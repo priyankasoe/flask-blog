@@ -10,9 +10,13 @@ def index():
 def about():
     return render_template('about.html')
 
-@app.route('/posts')
-def posts():
-    return render_template('posts.html')
+@app.route('/contact') 
+def contact():
+    return render_template('contact.html')
+
+@app.route('/post')
+def post():
+    return render_template('post.html')
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)

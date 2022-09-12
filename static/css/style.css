@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas {
+    position: absolute; 
+    background: rgb(101, 16, 212); 
+    top: 0; 
+    left: 0; 
+}

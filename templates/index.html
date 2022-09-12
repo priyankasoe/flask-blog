@@ -1,94 +1,35 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+
+<html> 
     <head>
-        <meta charset='utf-8'>
-        <meta name="viewport" content="width=device-width">
-        <meta name="description" content="Starter website yay!!"> 
-        <meta name = "keywords" content="blah blah blah, webdesign, woohoo">
-        <meta name = "author" content="Priyanka Soe">
-        <title>Starter Web Design | Welcome</title>
-        <link rel='stylesheet' type="text/css" href="../css/style2.css">
-    </head>
+        <title> Just Thoughts: The Blog </title>
+        <link rel='stylesheet' href='../static/css/style.css'>
+    </head> 
+
     <body>
-        <header >
-            <div class="container">
-                <div id="branding">
-                    <h1><span class="highlight">Justjkljsk</span> Thoughts</h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li class="current"><a href="{{ url_for('index') }}">Home</a></li>
-                        <li><a href="{{ url_for('about') }}">About</a></li>
-                        <li><a href="{{ url_for('posts') }}">Posts</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <canvas id='canvas1'> </canvas>
+        <script type='text/javascript' src='../js/test.js'></script> 
+        <header>
+            <!-- <script>
+                date = new Date();
+                year = date.getFullYear();
+                month = date.getMonth()+1;
+                day = date.getDate(); 
+                document.getElementById("current-date").innerHTML = month+" "+day+", "+year; 
+            </script> --> 
+
+            <h1><span class="highlight">Just</span> Thoughts</h1>
+            
+            <nav>
+                <ul>
+                    <li class="current"><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('post') }}">Posts</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <section id="showcase">
-            <div class="container">
-                <h1>.</h1>
-                <p>. </p>
-            </div>
-        </section>
 
-        <section id="newsletter">
-            <div class="container">
-                <h1>subscribe for more!</h1>
-                <form>
-                    <input type="email" placeholder="email">
-                    <button type="submit" class="button_1">subscribe</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="boxes">
-            <div class="container">
-                <div class="box">
-                    <img src="/img/sloth.jpg">
-                    <h3>HTML5 Markup</h3>
-                    <p>This is supposed to be some type of paragraph hahahh lorem ipsum</p>
-                </div>
-                <div class="box">
-                    <img src="/flaskr/img/sloth.jpg">
-                    <h3>Something Else</h3>
-                    <p>This is supposed to be some type of paragraph hahahh lorem ipsum</p>
-                </div>
-                <div class="box">
-                    <img src="/flaskr/img/sloth.jpg">
-                    <h3>Lolz</h3>
-                    <p>This is supposed to be some type of paragraph hahahh lorem ipsum</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Content 
-        <div class="container">
-            <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-            {% for post in posts %}
-                <div class="post-preview">
-                <a href="{{ url_for('posts', post_id=post.id) }}">
-                    <h2 class="post-title">
-                        {{ post.title }}
-                    </h2>
-                    <h3 class="post-subtitle">
-                        {{ post.subtitle }}
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by
-                    <a href="#"> {{ post.author }}</a>
-                    on {{ post.date_posted.strftime('%B %d, %Y') }}</p>
-                </div>
-                {% endfor %}
-                <hr>
-                <!- Pager ->
-            </div>
-            </div>
-        </div>-->
-
-        <footer>
-            <p>Just Thoughts, Copyright &copy; 2021</p>
-        </footer>
     </body>
 </html>
